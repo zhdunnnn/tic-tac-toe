@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic-tac-toe online</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="panel">
+      <p class="eyebrow">ONLINE MULTIPLAYER</p>
+      <h1>Tic-tac-toe</h1>
+      <p id="connection-status" class="connection">Connecting...</p>
+
+      <section id="menu" class="view">
+        <p>Play with a friend, wherever they are.</p>
+        <button id="create-button" class="primary">Create a game</button>
+        <button id="show-join-button" class="secondary">Join a game</button>
+      </section>
+
+      <section id="join-view" class="view hidden">
+        <label for="game-code">Enter game code</label>
+        <input id="game-code" maxlength="6" autocomplete="off" placeholder="6-character code">
+        <button id="join-button" class="primary">Join game</button>
+        <button id="back-button" class="text-button">Back</button>
+      </section>
+
+      <section id="waiting-view" class="view hidden">
+        <p>Share this code with your friend:</p>
+        <output id="game-code-display" class="code"></output>
+        <p>Waiting for another player...</p>
+        <button id="waiting-menu-button" class="text-button">Cancel game</button>
+      </section>
+
+      <section id="game-view" class="view hidden">
+        <p>Game code: <strong id="active-game-code"></strong></p>
+        <p id="game-message" aria-live="polite"></p>
+        <div id="board" class="board" role="grid" aria-label="Tic-tac-toe board"></div>
+        <button id="play-again-button" class="primary hidden">Play again</button>
+        <button id="menu-button" class="text-button">Back to menu</button>
+      </section>
+
+      <p id="error-message" class="error" role="alert"></p>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>

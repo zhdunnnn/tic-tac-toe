@@ -1,0 +1,17 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "Online tic-tac-toe using Express and Socket.IO",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
